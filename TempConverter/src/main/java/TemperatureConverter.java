@@ -13,6 +13,11 @@ public class TemperatureConverter {
         BigDecimal celsiusSanitised = new BigDecimal(celsiusVal).setScale(2, RoundingMode.DOWN);
         return celsiusSanitised.doubleValue();
     }
+    public double kelvinToCelsius(double kelvin) {
+        double celsiusVal = kelvin - 273.15;
+        BigDecimal celsiusSanitised =  new BigDecimal(celsiusVal).setScale(2, RoundingMode.DOWN);
+        return celsiusSanitised.doubleValue();
+    }
     public boolean isExtremeTemperature(double celsius) {
         if (celsius >= 50 || celsius <= -40) {
             return true;
